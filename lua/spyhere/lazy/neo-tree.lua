@@ -18,6 +18,8 @@ return {
       window = {
         mappings = {
           ['\\'] = 'close_window',
+          ['<esc>'] = 'cancel', -- close preview or floating neo-tree window
+          ['P'] = { 'toggle_preview', config = { use_float = false, use_image_nvim = true } },
         },
       },
     },

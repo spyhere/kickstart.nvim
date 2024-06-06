@@ -1,0 +1,23 @@
+return { -- You can easily change to a different colorscheme.
+  -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
+  'rebelot/kanagawa.nvim',
+  -- 'xiantang/darcula-dark.nvim',
+  priority = 1000, -- Make sure to load this before all the other start plugins.
+  init = function()
+    vim.cmd.colorscheme 'kanagawa-dragon'
+    -- vim.cmd.colorscheme 'darcula-dark'
+    vim.cmd.hi 'Comment gui=none'
+
+    -- vim.cmd.hi 'GitSignsAdd guifg=SeaGreen guibg=theme.ui.bg'
+    -- vim.cmd.hi 'GitSignsChange guifg=#8D9FE2 guibg=theme.ui.bg'
+    vim.cmd.hi 'GitSignsDelete guifg=#928B8F guibg=theme.ui.bg'
+    vim.cmd.hi 'GitSignsAdd guibg=theme.ui.bg'
+    vim.cmd.hi 'GitSignsChange guibg=theme.ui.bg'
+
+    vim.cmd.hi 'LineNr guibg=theme.ui.bg'
+    vim.cmd.hi 'SignColumn guibg=theme.ui.bg'
+
+    -- Hide cursor line highlight
+    vim.cmd.hi 'clear CursorLine'
+  end,
+}
