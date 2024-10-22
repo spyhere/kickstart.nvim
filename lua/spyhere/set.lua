@@ -1,6 +1,10 @@
 vim.opt.swapfile = false
 vim.opt.backup = false
 
+-- Spelling
+vim.opt.spell = true
+vim.opt.spelllang = 'en_us'
+
 -- Save undo history
 vim.opt.undodir = os.getenv 'HOME' .. '/.vim/undodir'
 vim.opt.undofile = true
