@@ -11,3 +11,12 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+
+vim.api.nvim_create_autocmd('TermOpen', {
+  desc = 'Disable spell and line numbers in terminal',
+  pattern = 'term://*',
+  callback = function()
+    vim.cmd 'setlocal nospell | setfiletype terminal'
+    vim.cmd 'lua ZenLineNumber()'
+  end,
+})
