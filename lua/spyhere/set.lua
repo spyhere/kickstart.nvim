@@ -15,18 +15,18 @@ vim.opt.relativenumber = true
 vim.opt.statuscolumn = '%=%{v:relnum?v:relnum:v:lnum} %s'
 
 function ZenLineNumber()
-  vim.cmd 'let &stc=""'
+  vim.cmd 'set nonu nornu | let &stc=""'
   vim.opt.cursorline = false
 end
 
 function RelativeNumber()
-  vim.cmd 'set rnu'
-  vim.cmd 'let &stc="%=%{v:relnum?v:relnum:v:lnum} %s"'
+  vim.cmd 'set nu rnu | let &stc="%=%{v:relnum?v:relnum:v:lnum} %s"'
+  vim.opt.cursorline = true
 end
 
 function AbsoluteNumber()
-  vim.cmd 'set nornu'
-  vim.cmd 'let &stc="%=%l %s"'
+  vim.cmd 'set nu nornu | let &stc="%=%l %s"'
+  vim.opt.cursorline = true
 end
 
 -- Don't wrap the lines when window is small
