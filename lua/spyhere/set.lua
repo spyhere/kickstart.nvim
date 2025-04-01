@@ -2,7 +2,7 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 
 -- Spelling
-vim.opt.spell = true
+vim.opt.spell = false
 vim.opt.spelllang = 'en_us'
 
 -- Save undo history
