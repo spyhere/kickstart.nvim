@@ -20,3 +20,21 @@ vim.api.nvim_create_autocmd('TermOpen', {
     vim.cmd 'lua ZenLineNumber()'
   end,
 })
+
+vim.api.nvim_create_autocmd('FileType', {
+  -- Add new languages below to clear 'l' register for them as well
+  pattern = { 'c' },
+  desc = 'Clear l register for other files',
+  callback = function()
+    vim.fn.setreg('l', '')
+  end,
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+  group = vim.api.nvim_create_augroup('JSLogMacro', { clear = true }),
+  desc = 'Snippet to quickly log variables in js',
+  pattern = { 'javascript', 'typescript' },
+  callback = function()
+    vim.fn.setreg('l', "$v_cconsole.log('pa: ', pA);")
+  end,
+})
