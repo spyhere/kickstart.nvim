@@ -46,6 +46,11 @@ vim.keymap.set('n', '<leader>f', function()
   vim.lsp.buf.format()
 end)
 
+-- CompareWithClipboard
+vim.keymap.set('v', '<leader>cv', ':<C-u>lua CompareWithClipboard()<CR>', { noremap = true, silent = true })
+-- Exit comparison
+vim.keymap.set('n', '<leader>dx', ':diffoff | wincmd p | tabclose<CR>', { noremap = true, silent = true })
+
 -- Quickfix list(buffer) navigation
 vim.keymap.set('n', '<leader>j', '<cmd>cnext<CR>', { desc = 'Next item from quickfix list' })
 vim.keymap.set('n', '<leader>k', '<cmd>cprev<CR>', { desc = 'Previous item from quickfix list' })
