@@ -38,3 +38,12 @@ vim.api.nvim_create_autocmd('FileType', {
     vim.fn.setreg('l', "$v_cconsole.log('pa: ', pA);")
   end,
 })
+
+vim.api.nvim_create_autocmd('FileType', {
+  group = vim.api.nvim_create_augroup('PythonLogMacro', { clear = true }),
+  desc = 'Snippet to quickly log variables in python',
+  pattern = { 'python' },
+  callback = function()
+    vim.fn.setreg('l', '$v_cprint(f"pa: {pa}")')
+  end,
+})
