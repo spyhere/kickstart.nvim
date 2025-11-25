@@ -66,3 +66,6 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 -- Neotree Git
 vim.keymap.set('n', '<leader>gs', '<cmd>Neotree float git_status<CR>', { desc = 'Open [G]it [S]tatus' })
+
+-- mini.files
+vim.keymap.set('n', '<M-m>', ':lua MiniFiles.open()<CR>', { desc = '[S]earch [G]it files' })
