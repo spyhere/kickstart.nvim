@@ -1,4 +1,5 @@
-require 'spyhere.set'
-require 'spyhere.remap'
-require 'spyhere.hoverwindow'
 require 'spyhere.autocommands'
+require 'spyhere.hoverwindow'
+require 'spyhere.remap'
+require 'spyhere.set'
+require 'spyhere.utility'
