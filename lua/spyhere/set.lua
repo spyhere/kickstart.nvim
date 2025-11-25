@@ -18,21 +18,6 @@ vim.opt.relativenumber = true
 -- Move statuscolumn (git signs) to the right from line number
 vim.opt.statuscolumn = '%=%{v:relnum?v:relnum:v:lnum} %s'
 
-function ZenLineNumber()
-  vim.cmd 'set nonu nornu | let &stc=""'
-  vim.opt.cursorline = false
-end
-
-function RelativeNumber()
-  vim.cmd 'set nu rnu | let &stc="%=%{v:relnum?v:relnum:v:lnum} %s"'
-  vim.opt.cursorline = true
-end
-
-function AbsoluteNumber()
-  vim.cmd 'set nu nornu | let &stc="%=%l %s"'
-  vim.opt.cursorline = true
-end
-
 -- Don't wrap the lines when window is small
 vim.opt.wrap = false
 
