@@ -18,6 +18,7 @@ vim.api.nvim_create_autocmd('TermOpen', {
   callback = function()
     vim.cmd 'setlocal nospell | setfiletype terminal'
     vim.cmd 'lua ZenLineNumber()'
+    vim.cmd 'startinsert'
   end,
 })
 
