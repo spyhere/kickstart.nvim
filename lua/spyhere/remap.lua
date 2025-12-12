@@ -69,3 +69,9 @@ vim.keymap.set('n', '<leader>gs', '<cmd>Neotree float git_status<CR>', { desc = 
 
 -- mini.files
 vim.keymap.set('n', '<M-m>', ':lua MiniFiles.open()<CR>', { desc = '[S]earch [G]it files' })
+
+-- Close terminal
+vim.api.nvim_set_keymap('t', '<C-d>', '<C-\\><C-n>:bd!<CR>', { noremap = true, silent = true })
+
+-- Exit terminal mode
+vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
