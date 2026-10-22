@@ -129,6 +129,7 @@ return { -- LSP Configuration & Plugins
       clangd = {},
       gopls = {},
       pyright = {},
+      -- html = {},
       -- rust_analyzer = {},
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
       --
@@ -138,6 +139,19 @@ return { -- LSP Configuration & Plugins
       -- But for many setups, the LSP (`tsserver`) will work just fine
       tsserver = {},
       --
+      tailwindcss = {
+        settings = {
+          tailwindCSS = {
+            includeLanguages = { 'class', 'className', 'classList' },
+          },
+        },
+      },
+
+      eslint = {
+        settings = {
+          useFlatConfig = true,
+        },
+      },
 
       lua_ls = {
         -- cmd = {...},
